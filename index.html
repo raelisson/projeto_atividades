@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sistema de Atividades Complementares</title>
+
+<style type="text/css">
+body,td,th {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #CCC;
+}
+</style>
+<?php
+ 
+ if (@$_GET["erro"] == "camposEmBrancos"){
+    echo = "* O campo não ser vazio.";
+ }
+
+ if (@$_GET["alerta"] == 1){
+    echo "* Usuário ou senha invalida.";
+ }
+?>
+<body>
+
+<form id="form1" name="form1" method="post" action="pages/pg_login.php">
+  <table width="200" border="0" align="center">
+    <tr>
+      <td height="135" colspan="2"><div align="center">
+        <h1><strong>Login</strong></h1>
+      </div></td>
+    </tr>
+    <tr>
+      <td width="60" height="21">Usuário:</td>
+      <td width="130"><label for="textfield"></label>
+      <input type="text" name="lg_usuario" id="lg_usuario" /><?php  echo $msg_text 
+      ?></td>
+    </tr>
+    <tr>
+      <td height="21">Senha:</td>
+      <td><label for="textfield2"></label>
+      <input type="password" name="lg_senha" id="lg_senha" /></td>
+    </tr>
+    <tr>
+      <td height="102" colspan="2"  align="center"><input type="submit" name="entrar" id="entrar" value="Entrar" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
